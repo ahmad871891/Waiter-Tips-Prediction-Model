@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tip Prediction</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+<div class="container">
+    <h2>Waiter Tip Prediction</h2>
+
+    <form action="/predict" method="POST">
+
+        <label>Total Bill</label>
+        <input type="number" step="0.01" name="total_bill" required>
+
+        <label>Sex</label>
+        <select name="sex">
+            <option value="0">Female</option>
+            <option value="1">Male</option>
+        </select>
+
+        <label>Smoker?</label>
+        <select name="smoker">
+            <option value="0">No</option>
+            <option value="1">Yes</option>
+        </select>
+
+        <label>Day</label>
+        <select name="day">
+            <option value="0">Thursday</option>
+            <option value="1">Friday</option>
+            <option value="2">Saturday</option>
+            <option value="3">Sunday</option>
+        </select>
+
+        <label>Time</label>
+        <select name="time">
+            <option value="0">Lunch</option>
+            <option value="1">Dinner</option>
+        </select>
+
+        <label>Party Size</label>
+        <input type="number" name="size" required>
+
+        <button type="submit">Predict Tip</button>
+    </form>
+</div>
+
+</body>
+</html>
